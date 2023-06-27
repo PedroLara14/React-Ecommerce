@@ -104,7 +104,7 @@ const ListProducts = () => {
         </Form>
       </section>
       <section>
-        <ul className="flex flex-wrap justify-center items-center gap-10 mt-5">
+        <ul className="flex flex-wrap justify-center items-center gap-20 p-14 mt-5">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

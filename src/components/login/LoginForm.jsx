@@ -55,7 +55,7 @@ const LoginForm = () => {
   return (
     <>
       <form className="w-72 mt-4" onSubmit={handleSubmit} onChange={handleChange}>
-        <div className="flex flex-col">
+        <div className="flex flex-col w-[21rem]">
           <label htmlFor="emailId"> Email:</label>
           <input
             type="email"
@@ -68,15 +68,16 @@ const LoginForm = () => {
         </div>
         <div className="relative flex flex-col mt-2">
           <label htmlFor="passwordId">Password</label>
-          <div className="flex flex-col">
+          <div className="flex flex-col w-[21rem]">
             <input
               type={togleType}
               id="passwordId"
               name="password"
+              placeholder="password123"
               value={loginFormData.password}
               required
             />
-            <button className="absolute ml-64" type="button" onClick={handleClickType}>
+            <button className="absolute ml-80" type="button" onClick={handleClickType}>
               {!changeIcon ? (
                 <i className="bx bxs-show"></i>
               ) : (
@@ -87,7 +88,7 @@ const LoginForm = () => {
         </div>
         <button
           type="submit"
-          className="mt-6 w-72 border bg-orange-400 py-1 rounded text-white"
+          className="mt-6 w-[21rem] border bg-orange-400 py-1 rounded text-white"
         >
           Login
         </button>

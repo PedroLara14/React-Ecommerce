@@ -43,22 +43,22 @@ const ProductCard = ({ product }) => {
         <p className="mt-1 ml-6 font-bold text-[#4f4f4f]">{product.title}</p>
         <h2 className="mt-3 ml-3 font-bold text-[#c7c7c7]">Price</h2>
         <p className="mt-1 ml-6 font-bold text-[#4f4f4f]">$ {product.price}</p>
-        <div className="absolute ml-52">
-          {!isPorductInCart && (
-            <button
-              className="bg-orange-500 px-3 py-2 rounded-full text-lg text-white"
-              onClick={handleAddProductBtn}
-              disabled={cart.loading}
-            >
-              <i className="bx bx-cart-add"></i>
-            </button>
-          )}
-          {isPorductInCart && (
-            <p className="text-orange-400 text-center text-3xl px-3 py-2 ">
-              <i className="bx bx-check-circle"></i>
-            </p>
-          )}
-        </div>
+          <div className="h-10 left-2 ml-48">
+            {!isPorductInCart && (
+              <button
+                className="bg-orange-500 absolute rounded-[50%] px-3 py-[0.4rem] text-lg text-white"
+                onClick={handleAddProductBtn}
+                disabled={cart.loading}
+              >
+                <i className="mt-1 bx bx-cart-add"></i>
+              </button>
+            )}
+            {isPorductInCart && (
+              <p className="text-orange-400 text-center text-3xl px-3 py-2 ">
+                <i className="bx bx-check-circle"></i>
+              </p>
+            )}
+          </div>
       </section>
     </article>
   );

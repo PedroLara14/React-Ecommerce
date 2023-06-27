@@ -15,7 +15,7 @@ const Profile = () => {
       <div className="flex flex-col justify-center items-center bg-white py-16 rounded-md">
         <img src={userImage} alt="profile_image" className="w-1/4" />
         <p> {`${firstNameUser} ${lastNameUser}`} </p>
-        <button onClick={() => dispatch(reset())}>LogOut</button>
+        <button onClick={() => dispatch(reset())}>Log Out</button>
       </div>
     </div>
   );

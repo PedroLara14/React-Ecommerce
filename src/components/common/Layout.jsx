@@ -4,6 +4,7 @@ import Cart from './Cart';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Layout = () => {
   const [cartVsible, setCartVsible] = useState(false);
@@ -32,7 +33,7 @@ const Layout = () => {
 
   return (
     <div>
-      <div className="flex flex-col bg-stone-100 h-screen">
+      <div className="flex flex-col bg-stone-100 h-screen w-[100%]">
         <div className="fixed w-screen z-10">
           <header className="flex flex-row items-center h-10 bg-white">
             <div className="w-40">
@@ -67,8 +68,16 @@ const Layout = () => {
           <main className="flex flex-col items-center justify-center min-h-screen">
             <Outlet />
           </main>
-          <footer className="inset-x-0 bottom-full p-[3.75rem] text-center bg-[#3c3c3b] text-white">
-            e-commerce project
+          <footer className="inset-x-0 bottom-full p-[3rem] w-screen text-center bg-[#3c3c3b] text-white">
+            © Pedro Andres Lara Campo - 2023
+            <div className="inset-0 bottom-full mt-2 flex items-center justify-center">
+              <a href="https://github.com/PedroLara14" target="_blank">
+                <FaGithub size="1.5em" className="mr-2" />
+              </a>
+              <a href="https://www.linkedin.com/in/pedroandreslara/" target="_blank">
+                <FaLinkedin size="1.5em" />
+              </a>
+            </div>
           </footer>
         </div>
       </div>
